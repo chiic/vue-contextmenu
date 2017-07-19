@@ -69,13 +69,13 @@
 <style>
   .context-menu-wrapper {
     box-shadow: 2px 2px 2px #cccccc;
-    opacity: 0;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
   }
   .contextmenuwrapperadd {
-    opacity: 1;
+    display: block;
   }
   .context-menu-list {
     width: 150px;

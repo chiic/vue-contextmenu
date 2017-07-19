@@ -1,5 +1,5 @@
 <template>
-  <span id="contextMenuTotle" class="context-menu-wrapper"
+  <span id="contextMenuTotle" class="vue-contextmenu-wrapper"
         :class="{contextmenuwrapperadd: MenuToggle}">
     <li v-for="item in contextMenuData.menulists" class="context-menu-list">
       <button @click.stop="fnHandler(item)">
@@ -67,8 +67,9 @@
   }
 </script>
 <style>
-  .context-menu-wrapper {
+  .vue-contextmenu-wrapper {
     box-shadow: 2px 2px 2px #cccccc;
+    z-index: 999;
     display: none;
     position: fixed;
     top: 0;

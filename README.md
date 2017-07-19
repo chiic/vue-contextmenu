@@ -73,7 +73,7 @@ npm install vue-contextmenu --save
 	        this.contextMenuData.isShowMenu = !this.contextMenuData.isShowMenu
 	      },
 	      savedata () {
-	      	console.log('save successfully!')
+	      	alert(1)
 	      },
 	      newdata () {
 	      	console.log('newdata!')

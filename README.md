@@ -8,12 +8,9 @@
 npm install vue-contextmenu --save
 
 # Vue mount
-	//import
-	import VueContextMenu form 'vue-contextmenu'
-	import from 'vue-context/style/css/font-awesome.min.css'
 	// mount with component
 	import VueContextMenu form 'vue-contextmenu'
-	import from 'vue-context/style/css/font-awesome.min.css'
+	import from 'vue-context/style/css/font-awesome.min.css' // use font-awesome icon (http://fontawesome.io/)
 
 	export default {
 		components: {
@@ -52,7 +49,7 @@ npm install vue-contextmenu --save
 	          menulists: [
 	            {
 	              fnHandler: 'savedata', // Binding events(绑定事件)
-	              icoName: 'fa fa-home fa-fw', // ico (ico图标)
+	              icoName: 'fa fa-home fa-fw', // icon (icon图标 )
 	              btnName: 'Save' // The name of the menu option (菜单名称)
 	            }, 
 	            {

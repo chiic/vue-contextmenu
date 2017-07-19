@@ -82,7 +82,7 @@ npm install vue-contextmenu --save
 	  }
 	</script>
 # Test demo
-	![Image](https://raw.githubusercontent.com/chIIC/vue-contextmenu/master/test.gif)
+	![Image text](https://raw.githubusercontent.com/chIIC/vue-contextmenu/master/test.gif)
 
 
 

@@ -84,5 +84,8 @@ npm install vue-contextmenu --save
 # Test demo
 ![Image text](https://raw.githubusercontent.com/chIIC/vue-contextmenu/master/test.gif)
 
+# Email
+	xxnmiss@163.com
+
 
 

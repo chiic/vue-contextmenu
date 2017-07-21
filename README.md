@@ -20,7 +20,7 @@ npm install vue-contextmenu --save
 # Use in SPA
 	<template>
 	  <div id="app" @contextmenu="showMenu" style="width: 100px;height: 100px;background: red;">
-	    <vue-context-menu :contextMenuData="contextMenuData" 
+	    <vue-context-menu :contextMenuData="contextMenuData"
 		                  @savedata="savedata"
 		                  @newdata="newdata">
 	    </vue-context-menu>
@@ -49,10 +49,10 @@ npm install vue-contextmenu --save
 	              fnHandler: 'savedata', // Binding events(绑定事件)
 	              icoName: 'fa fa-home fa-fw', // icon (icon图标 )
 	              btnName: 'Save' // The name of the menu option (菜单名称)
-	            }, 
+	            },
 	            {
-	              fnHandler: 'newdata', 
-	              icoName: 'fa fa-home fa-fw', 
+	              fnHandler: 'newdata',
+	              icoName: 'fa fa-home fa-fw',
 	              btnName: 'New'
 	            }
 	          ]
@@ -79,68 +79,68 @@ npm install vue-contextmenu --save
 	  }
 	</script>
 # Use in SPA(List Rendering)
-<template>
-  <div>
-    <div @contextmenu="showMenu(index)"
-         style="width: 100px;height: 100px;background: red;margin-top: 20px;"
-         v-for="(n, index) in 4" :key="n" >
-         <vue-context-menu :contextMenuData="contextMenuData"
-                           :transferIndex="transferIndex"
-                           @savedata="savedata(index)"
-                           @newdata="newdata"></vue-context-menu>
-    </div>
-  </div>
-</template>
-<script>
-  import VueContextMenu from 'vue-contextmenu'
-  import 'vue-contextmenu/style/css/font-awesome.min.css'
-  export default {
-    name: 'app',
-    components: {
-      VueContextMenu
-    },
-    data () {
-      return {
-        transferIndex: null, //Show the menu that was clicked
-        contextMenuData: {
-          axios: {
-            x: null,
-            y: null
-          },
-          menulists: [
-            {
-              fnHandler: 'savedata',
-              icoName: 'fa fa-home fa-fw',
-              btnName: 'Save'
-            },
-            {
-              fnHandler: 'newdata',
-              icoName: 'fa fa-home fa-fw',
-              btnName: 'New'
+    <template>
+      <div>
+        <div @contextmenu="showMenu(index)"
+             style="width: 100px;height: 100px;background: red;margin-top: 20px;"
+             v-for="(n, index) in 4" :key="n" >
+             <vue-context-menu :contextMenuData="contextMenuData"
+                               :transferIndex="transferIndex"
+                               @savedata="savedata(index)"
+                               @newdata="newdata"></vue-context-menu>
+        </div>
+      </div>
+    </template>
+    <script>
+      import VueContextMenu from 'vue-contextmenu'
+      import 'vue-contextmenu/style/css/font-awesome.min.css'
+      export default {
+        name: 'app',
+        components: {
+          VueContextMenu
+        },
+        data () {
+          return {
+            transferIndex: null, //Show the menu that was clicked
+            contextMenuData: {
+              axios: {
+                x: null,
+                y: null
+              },
+              menulists: [
+                {
+                  fnHandler: 'savedata',
+                  icoName: 'fa fa-home fa-fw',
+                  btnName: 'Save'
+                },
+                {
+                  fnHandler: 'newdata',
+                  icoName: 'fa fa-home fa-fw',
+                  btnName: 'New'
+                }
+              ]
             }
-          ]
+          }
+        },
+        methods: {
+          showMenu (index) {
+            this.transferIndex = index //tranfer index to child component
+            event.preventDefault()
+            var x = event.pageX
+            var y = event.pageY
+            this.contextMenuData.axios = {
+              x, y
+            }
+          },
+          savedata (e) {
+            console.log('click:' + e)
+          },
+          newdata () {
+            console.log(2222)
+          }
         }
       }
-    },
-    methods: {
-      showMenu (index) {
-        this.transferIndex = index //tranfer index to child component
-        event.preventDefault()
-        var x = event.pageX
-        var y = event.pageY
-        this.contextMenuData.axios = {
-          x, y
-        }
-      },
-      savedata (e) {
-        console.log('click:' + e)
-      },
-      newdata () {
-        console.log(2222)
-      }
-    }
-  }
-</script>
+    </script>
 # Email
     xxnmiss@163.com
 # Test demo(use in spa)

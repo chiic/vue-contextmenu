@@ -1,6 +1,5 @@
 <template>
-  <span id="contextMenuTotle" class="vue-contextmenu-wrapper"
-        :class="{contextmenuwrapperadd: MenuToggle}">
+  <span class="contextMenuTotle vue-contextmenu-listWrapper">
     <li v-for="item in contextMenuData.menulists" class="context-menu-list">
       <button @click.stop="fnHandler(item)">
         <i :class="item.icoName"></i>
@@ -15,47 +14,42 @@
       contextMenuData: {
         type: Object,
         requred: false,
-        default () {
-          return {
-            isShowMenu: true,
-            axios: {
-              x: null,
-              y: null
+        default: {
+          axios: {
+            x: null,
+            y: null
+          },
+          menulists: [
+            {
+              fnHandler: 'adddata',
+              icoName: 'fa fa-home fa-fw',
+              btnName: 'New'
             },
-            menulists: [
-              {
-                fnHandler: 'adddata',
-                icoName: 'fa fa-home fa-fw',
-                btnName: 'New'
-              },
-              {
-                fnHandler: 'savedata',
-                icoName: 'fa fa-home fa-fw',
-                btnName: 'Save'
-              }
-            ]
-          }
+            {
+              fnHandler: 'savedata',
+              icoName: 'fa fa-home fa-fw',
+              btnName: 'Save'
+            }
+          ]
         }
-      }
-    },
-    data () {
-      return {
-        MenuToggle: false
+      },
+      transferIndex: {
+        type: Number,
+        default: 0
       }
     },
     watch: {
       'contextMenuData.axios' (val) {
         var x = val.x
         var y = val.y
-        var menu = document.getElementById('contextMenuTotle')
+        var _this = this
+        var index = _this.transferIndex
+        var menu = document.getElementsByClassName('contextMenuTotle')[index]
+        menu.style.display = 'block'
         menu.style.left = x + 'px'
         menu.style.top = y + 'px'
-      },
-      'contextMenuData.isShowMenu' (val) {
-        this.MenuToggle = true
-        var _this = this
         document.addEventListener('mouseup', function () {
-          _this.MenuToggle = false
+          menu.style.display = 'none'
         }, false)
       }
     },
@@ -67,18 +61,15 @@
   }
 </script>
 <style>
-  .vue-contextmenu-wrapper {
+  .vue-contextmenu-listWrapper {
     box-shadow: 2px 2px 2px #cccccc;
-    z-index: 999;
     display: none;
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
   }
-  .contextmenuwrapperadd {
-    display: block;
-  }
-  .context-menu-list {
+  .vue-contextmenu-listWrapper .context-menu-list {
     width: 150px;
     height: 32px;
     border-radius: 4px;
@@ -86,7 +77,7 @@
     text-decoration: none;
     list-style: none;
   }
-  .context-menu-list button {
+  .vue-contextmenu-listWrapper .context-menu-list button {
     cursor: pointer;
     width: 100%;
     height: 100%;
@@ -94,13 +85,13 @@
     outline: 0;
     border: 0;
   }
-  .context-menu-list button i, span {
+  .vue-contextmenu-listWrapper .context-menu-list button i, span {
     float: left;
   }
-  .context-menu-list button i{
+  .vue-contextmenu-listWrapper .context-menu-list button i{
     padding: 0 10px 0 10px;
   }
-  .context-menu-list button:hover {
+  .vue-contextmenu-listWrapper .context-menu-list button:hover {
     box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
     color: #ffffff;
     border-radius: 4px;

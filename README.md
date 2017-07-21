@@ -143,10 +143,9 @@ npm install vue-contextmenu --save
     </script>
 # Email
     xxnmiss@163.com
-# Test demo(use in spa)
+# Test demo(use in spa and use in List Rendering)
 ![Image text](https://raw.githubusercontent.com/chIIC/vue-contextmenu/master/test.gif)
 
-#Test demo(use in apa(List Rendering))
 ![Image text](https://raw.githubusercontent.com/chIIC/vue-contextmenu/master/test1.gif)
 
 

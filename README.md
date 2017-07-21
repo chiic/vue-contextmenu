@@ -101,7 +101,7 @@ npm install vue-contextmenu --save
         },
         data () {
           return {
-            transferIndex: null, //Show the menu that was clicked
+            transferIndex: null, // Show the menu that was clicked
             contextMenuData: {
               axios: {
                 x: null,
@@ -124,7 +124,7 @@ npm install vue-contextmenu --save
         },
         methods: {
           showMenu (index) {
-            this.transferIndex = index //tranfer index to child component
+            this.transferIndex = index // tranfer index to child component
             event.preventDefault()
             var x = event.pageX
             var y = event.pageY

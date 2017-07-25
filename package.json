@@ -1,7 +1,7 @@
 {
   "name": "vue-contextmenu",
   "description": "vue contextmenu",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "./dist/vue-contextmenu.min.js",
   "author": "chIIC <xxnmiss@163.com>",
   "private": false,

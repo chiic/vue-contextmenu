@@ -87,7 +87,7 @@
     outline: 0;
     border: 0;
   }
-  .vue-contextmenu-listWrapper .context-menu-list button i, span {
+  .vue-contextmenu-listWrapper .context-menu-list button i,  .vue-contextmenu-listWrapper .context-menu-list button span {
     float: left;
   }
   .vue-contextmenu-listWrapper .context-menu-list button i{

@@ -64,8 +64,8 @@ npm install vue-contextmenu --save
 	    methods: {
 	      showMenu () {
 	        event.preventDefault()
-	        var x = event.pageX
-	        var y = event.pageY
+	        var x = event.clientX
+	        var y = event.clientY
 	        // Get the current location
 	        this.contextMenuData.axios = {
 	          x, y
@@ -129,8 +129,8 @@ npm install vue-contextmenu --save
           showMenu (index) {
             this.transferIndex = index // tranfer index to child component
             event.preventDefault()
-            var x = event.pageX
-            var y = event.pageY
+            var x = event.clientX
+            var y = event.clientY
             this.contextMenuData.axios = {
               x, y
             }

@@ -1,5 +1,5 @@
 <template>
-  <span class="vue-contextmenu-listWrapper" :class="contextMenuData.menuName">
+  <span class="vue-contextmenu-listWrapper" :class="'vue-contextmenuName-' + contextMenuData.menuName">
     <li v-for="item in contextMenuData.menulists" class="context-menu-list">
       <button @click.stop="fnHandler(item)">
         <i :class="item.icoName"></i>
@@ -45,8 +45,8 @@
         var y = val.y
         var _this = this
         var index = _this.transferIndex
-        var menuName = '.' + _this.contextMenuData.menuName
-        var menu = document.querySelectorAll('vue-contextmenu-listWrapper,' + menuName)[index]
+        var menuName = 'vue-contextmenuName-' + _this.contextMenuData.menuName
+        var menu = document.getElementsByClassName(menuName)[index]
         menu.style.display = 'block'
         menu.style.left = x + 'px'
         menu.style.top = y + 'px'
@@ -100,7 +100,6 @@
     background: -webkit-linear-gradient(bottom, #5a6a76 , #2e3940); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom, #5a6a76, #2e3940); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom, #5a6a76, #2e3940); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to bottom, #5a6a76 , #2e3940); 
+    background: linear-gradient(to bottom, #5a6a76 , #2e3940);
   }
-
 </style>

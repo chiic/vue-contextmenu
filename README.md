@@ -8,6 +8,11 @@
 npm install vue-contextmenu --save
 
 # Vue mount
+ 	// mount with global
+ 	import VueContextMenu form 'vue-contextmenu'
+	import from 'vue-context/style/css/font-awesome.min.css'
+	Vue.use(VueContextMenu)
+	
 	// mount with component
 	import VueContextMenu form 'vue-contextmenu'
 	import from 'vue-context/style/css/font-awesome.min.css' // use font-awesome icon (http://fontawesome.io/)

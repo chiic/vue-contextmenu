@@ -14,24 +14,26 @@
       contextMenuData: {
         type: Object,
         requred: false,
-        default: {
-          menuName: null,
-          axios: {
-            x: null,
-            y: null
-          },
-          menulists: [
-            {
-              fnHandler: 'adddata',
-              icoName: 'fa fa-home fa-fw',
-              btnName: 'New'
+        default () {
+          return {
+            menuName: null,
+            axios: {
+              x: null,
+              y: null
             },
-            {
-              fnHandler: 'savedata',
-              icoName: 'fa fa-home fa-fw',
-              btnName: 'Save'
-            }
-          ]
+            menulists: [
+              {
+                fnHandler: 'adddata',
+                icoName: 'fa fa-home fa-fw',
+                btnName: 'New'
+              },
+              {
+                fnHandler: 'savedata',
+                icoName: 'fa fa-home fa-fw',
+                btnName: 'Save'
+              }
+            ]
+          }
         }
       },
       transferIndex: {
@@ -67,7 +69,7 @@
     box-shadow: 2px 2px 2px #cccccc;
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     top: 0;
     left: 0;
   }

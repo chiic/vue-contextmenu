@@ -9,8 +9,8 @@ npm install vue-contextmenu --save
 
 # Vue mount
  	// mount with global
- 	import VueContextMenu form 'vue-contextmenu'
-	import from 'vue-context/style/css/font-awesome.min.css'
+ 	import VueContextMenu from 'vue-contextmenu'
+	import 'vue-context/style/css/font-awesome.min.css'
 	Vue.use(VueContextMenu)
 	
 	// mount with component
@@ -32,6 +32,7 @@ npm install vue-contextmenu --save
 	  </div>
 	</template>
 	<script>
+	  // mount with component, if you have used in global, you not need it.
 	  import VueContextMenu from 'vue-contextmenu'
 	  import 'vue-contextmenu/style/css/font-awesome.min.css'
 	  export default {

@@ -12,16 +12,6 @@ npm install vue-contextmenu --save
  	import VueContextMenu from 'vue-contextmenu'
 	import 'vue-context/style/css/font-awesome.min.css'
 	Vue.use(VueContextMenu)
-	
-	// mount with component
-	import VueContextMenu form 'vue-contextmenu'
-	import from 'vue-context/style/css/font-awesome.min.css' // use font-awesome icon (http://fontawesome.io/)
-
-	export default {
-		components: {
-			VueContextMenu
-		}
-	}
 # Use in SPA
 	<template>
 	  <div id="app" @contextmenu="showMenu" style="width: 100px;height: 100px;background: red;">
@@ -32,14 +22,8 @@ npm install vue-contextmenu --save
 	  </div>
 	</template>
 	<script>
-	  // mount with component, if you have used in global, you not need it.
-	  import VueContextMenu from 'vue-contextmenu'
-	  import 'vue-contextmenu/style/css/font-awesome.min.css'
 	  export default {
 	    name: 'app',
-	    components: {
-	      VueContextMenu
-	    },
 	    data () {
 	      return {
 	      	// contextmenu data (菜单数据)

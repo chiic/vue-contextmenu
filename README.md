@@ -10,7 +10,7 @@ npm install vue-contextmenu --save
 # Vue mount
  	// mount with global
  	import VueContextMenu from 'vue-contextmenu'
-	import 'vue-context/style/css/font-awesome.min.css'
+	import 'vue-contextmenu/style/css/font-awesome.min.css'
 	Vue.use(VueContextMenu)
 # Use in SPA
 	<template>
@@ -84,13 +84,8 @@ npm install vue-contextmenu --save
       </div>
     </template>
     <script>
-      import VueContextMenu from 'vue-contextmenu'
-      import 'vue-contextmenu/style/css/font-awesome.min.css'
       export default {
         name: 'app',
-        components: {
-          VueContextMenu
-        },
         data () {
           return {
             transferIndex: null, // Show the menu that was clicked

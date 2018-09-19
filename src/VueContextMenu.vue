@@ -52,8 +52,11 @@
         menu.style.display = 'block'
         menu.style.left = x + 'px'
         menu.style.top = y + 'px'
-        document.addEventListener('mouseup', function () {
-          menu.style.display = 'none'
+        document.addEventListener('mouseup', function (e) {
+          //解决mac电脑在鼠标右键后会执行mouseup事件
+          if (e.button === 0) {
+             menu.style.display = 'none' 
+          }
         }, false)
       }
     },

@@ -1,12 +1,14 @@
 <template>
-  <span class="vue-contextmenu-listWrapper" :class="'vue-contextmenuName-' + contextMenuData.menuName">
-    <li v-for="item in contextMenuData.menulists" class="context-menu-list">
-      <button @click.stop="fnHandler(item)">
+  <ul class="vue-contextmenu-listWrapper" :class="'vue-contextmenuName-' + contextMenuData.menuName">
+    <li v-for="item in contextMenuData.menulists"
+      class="context-menu-list"
+      :key="item.btnName">
+      <button @click.stop="fnHandler(item)" type="button">
         <i :class="item.icoName"></i>
         <span>{{item.btnName}}</span>
       </button>
     </li>
-  </span>
+  </ul>
 </template>
 <script>
   export default {
@@ -53,9 +55,9 @@
         menu.style.left = x + 'px'
         menu.style.top = y + 'px'
         document.addEventListener('mouseup', function (e) {
-          //解决mac电脑在鼠标右键后会执行mouseup事件
+          // 解决mac电脑在鼠标右键后会执行mouseup事件
           if (e.button === 0) {
-             menu.style.display = 'none' 
+            menu.style.display = 'none' 
           }
         }, false)
       }

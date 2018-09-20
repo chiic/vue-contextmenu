@@ -31,7 +31,7 @@ npm install vue-contextmenu --save
 	        // the contextmenu name(@1.4.1 updated)
 	          menuName: 'demo',
 	        // The coordinates of the display(菜单显示的位置)
-	          axios: {
+	          axis: {
 	            x: null,
 	            y: null
 	          },
@@ -57,7 +57,7 @@ npm install vue-contextmenu --save
 	        var x = event.clientX
 	        var y = event.clientY
 	        // Get the current location
-	        this.contextMenuData.axios = {
+	        this.contextMenuData.axis = {
 	          x, y
 	        }
 	      },
@@ -91,7 +91,7 @@ npm install vue-contextmenu --save
             transferIndex: null, // Show the menu that was clicked
             contextMenuData: {
               menuName: 'demo',
-              axios: {
+              axis: {
                 x: null,
                 y: null
               },
@@ -116,7 +116,7 @@ npm install vue-contextmenu --save
             event.preventDefault()
             var x = event.clientX
             var y = event.clientY
-            this.contextMenuData.axios = {
+            this.contextMenuData.axis = {
               x, y
             }
           },

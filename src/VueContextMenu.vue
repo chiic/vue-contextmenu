@@ -19,7 +19,7 @@
         default () {
           return {
             menuName: null,
-            axios: {
+            axis: {
               x: null,
               y: null
             },

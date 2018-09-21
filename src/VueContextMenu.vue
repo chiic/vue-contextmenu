@@ -44,7 +44,7 @@
       }
     },
     watch: {
-      'contextMenuData.axios' (val) {
+      'contextMenuData.axis' (val) {
         var x = val.x
         var y = val.y
         var _this = this

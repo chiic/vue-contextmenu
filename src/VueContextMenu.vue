@@ -54,6 +54,16 @@
         menu.style.display = 'block'
         menu.style.left = x + 'px'
         menu.style.top = y + 'px'
+        // 判断menu距离浏览器可视窗口底部距离,以免距离底部太近的时候，会导致menu被遮挡
+        var distanceToBottm = document.body.clientHeight - menu.offsetTop - menu.scrollHeight
+        // 同理判断距离右侧距离
+        var distanceToRight = document.body.clientWidth - menu.offsetLeft - menu.scrollWidth
+        if (distanceToBottm < menu.scrollHeight) {
+          menu.style.top = y - menu.scrollHeight + 'px'
+        }
+        if (distanceToRight < menu.scrollWidth) {
+          menu.style.top = x - menu.scrollWidth + 'px'
+        }
         document.addEventListener('mouseup', function (e) {
           // 解决mac电脑在鼠标右键后会执行mouseup事件
           if (e.button === 0) {

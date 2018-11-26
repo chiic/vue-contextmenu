@@ -64,7 +64,7 @@
           menu.style.top = y - menuHeight + 'px'
         }
         if (distanceToRight < menuWidth) {
-          menu.style.top = x - menuWidth + 'px'
+          menu.style.left = x - menuWidth + 'px'
         }
         document.addEventListener('mouseup', function (e) {
           // 解决mac电脑在鼠标右键后会执行mouseup事件

@@ -25,14 +25,14 @@
             },
             menulists: [
               {
-                fnHandler: 'adddata',
-                icoName: 'fa fa-home fa-fw',
-                btnName: 'New'
+                fnHandler: '',
+                icoName: '',
+                btnName: ''
               },
               {
-                fnHandler: 'savedata',
-                icoName: 'fa fa-home fa-fw',
-                btnName: 'Save'
+                fnHandler: '',
+                icoName: '',
+                btnName: ''
               }
             ]
           }
@@ -47,25 +47,20 @@
       'contextMenuData.axis' (val) {
         var x = val.x
         var y = val.y
+        var innerWidth = window.innerWidth
+        var innerHeight = window.innerHeight
         var _this = this
+        var menus = _this.$refs.vuecontextmenulist
         var index = _this.transferIndex
         var menuName = 'vue-contextmenuName-' + _this.contextMenuData.menuName
         var menu = document.getElementsByClassName(menuName)[index]
         menu.style.display = 'block'
-        menu.style.left = x + 'px'
-        menu.style.top = y + 'px'
-        // 判断menu距离浏览器可视窗口底部距离,以免距离底部太近的时候，会导致menu被遮挡
-        var menuHeight = this.contextMenuData.menulists.length * 32 //不能用scrollHeight,获取到的menu是上一次的menu宽高
-        var menuWidth = 150 //不能用scrollWidth,同理
-        var distanceToBottm = document.body.clientHeight - menu.offsetTop - menuHeight
-        // 同理判断距离右侧距离
-        var distanceToRight = document.body.clientWidth - menu.offsetLeft - menuWidth
-        if (distanceToBottm < menuHeight) {
-          menu.style.top = y - menuHeight + 'px'
-        }
-        if (distanceToRight < menuWidth) {
-          menu.style.top = x - menuWidth + 'px'
-        }
+        var menuHeight = this.contextMenuData.menulists.length * 32
+        var menuWidth = 150
+        var distanceToBottm = y + menuHeight
+        var distanceToRight = x + menuWidth
+        menu.style.top = (distanceToBottm > innerHeight ? y - distanceToBottm + innerHeight : y) + 'px'
+        menu.style.left = (distanceToRight > innerWidth ? x - distanceToRight + innerWidth : x) + 'px'
         document.addEventListener('mouseup', function (e) {
           // 解决mac电脑在鼠标右键后会执行mouseup事件
           if (e.button === 0) {
@@ -120,5 +115,8 @@
     background: -o-linear-gradient(bottom, #5a6a76, #2e3940); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom, #5a6a76, #2e3940); /* Firefox 3.6 - 15 */
     background: linear-gradient(to bottom, #5a6a76 , #2e3940);
+  }
+  .vue-contextmenu-listWrapper .context-menu-list button span {
+    margin-left: 5px;
   }
 </style>

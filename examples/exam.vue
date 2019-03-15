@@ -9,11 +9,11 @@
       <vue-context-menu
         :contextMenuData="contextMenuData"
         :transferIndex="transferIndex"
-        @Handler1="Handler1(index)"
-        @Handler2="Handler2(index)"
-        @Handler3="Handler3(index)"
-        @Handler4="Handler4(index)"
-        @Handler5="Handler5(index)"
+        @Handler1="Handler_A(index)"
+        @Handler2="Handler_B(index)"
+        @Handler3="Handler_C(index)"
+        @Handler4="Handler_D(index)"
+        @Handler5="Handler_E(index)"
       ></vue-context-menu>
     </div>
   </div>
@@ -102,19 +102,19 @@ export default {
         y
       };
     },
-    Handler1 (index) {
+    Handler_A (index) {
       console.log('index:', index, '选项1-1-1绑定事件执行');
     },
-    Handler2 (index) {
+    Handler_B (index) {
       console.log('index:', index, '选项1-1-2绑定事件执行');
     },
-    Handler3 (index) {
+    Handler_C (index) {
       console.log('index:', index, '选项1-2-1绑定事件执行');
     },
-    Handler4 (index) {
+    Handler_D (index) {
       console.log('index:', index, '选项1-2-2绑定事件执行');
     },
-    Handler5 (index) {
+    Handler_E (index) {
       console.log('index:', index, '选项2-1绑定事件执行');
     }
   }

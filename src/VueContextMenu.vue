@@ -25,7 +25,7 @@
   </ul>
 </template>
 <script>
-  import Tree from './Tree'
+  import Tree from './Tree.vue'
   export default {
     name: 'context-menu-component',
     components: {

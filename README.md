@@ -111,12 +111,12 @@ export default {
               {
                 icoName: "fa fa-adn",
                 btnName: "选项1-1",
-								// submenu (子菜单)
+		// submenu (子菜单)
                 children: [
                   {
                     icoName: "fa fa-file",
-										// submenu (子菜单)
-										btnName: "选项1-1-1",
+		    // submenu (子菜单)
+		    btnName: "选项1-1-1",
                     children: [
                       {
                         icoName: "fa fa-android",

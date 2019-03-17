@@ -111,17 +111,19 @@ export default {
               {
                 icoName: "fa fa-adn",
                 btnName: "选项1-1",
+								// submenu (子菜单)
                 children: [
                   {
                     icoName: "fa fa-file",
+										// submenu (子菜单)
+										btnName: "选项1-1-1",
                     children: [
                       {
                         icoName: "fa fa-android",
                         fnHandler: "Handler1",
                         btnName: "选项1-1-1"
                       }
-                    ],
-                    btnName: "选项1-1-1"
+                    ]
                   }
                 ]
               }
@@ -186,4 +188,16 @@ export default {
 ```
 ### icon
 use [font Awesome](https://fontawesome.com/),also you can use other UI components icon,for example [elementUI](http://element-cn.eleme.io/).And add the icon class to "icoName". if you set like (icoName: 'el-icon-delete'), that will be add a "Trash" to your page.
-### Test demo
+you can add the style file into html like this:
+```<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">```
+also if you use like elementUI, maybe you can use by
+```
+   import 'element-ui/lib/theme-chalk/index.css';
+```
+### overview
+![img](https://raw.githubusercontent.com/chiic/vue-contextmenu/master/test01.png)
+![img](https://raw.githubusercontent.com/chiic/vue-contextmenu/master/test02.png)
+
+### usage detail
+[usage detail](./USEDETAIL.md)
+

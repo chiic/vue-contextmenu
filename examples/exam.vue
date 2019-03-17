@@ -2,7 +2,7 @@
   <div style="position: fixed;left:0px;top:0;">
     <div
       @contextmenu="showMenu(index)"
-      style="width: 100px;height: 100px;"
+      style="width: 100px;height: 100px;background: red;"
       v-for="(n, index) in 4"
       :key="n"
     >

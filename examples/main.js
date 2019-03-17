@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import simple from './simple.vue'
+import exam from './exam.vue'
 import VueContextMenu from '../src/main'
 Vue.use(VueContextMenu)
 
 new Vue({
   el: '#app',
-  render: h => h(simple)
+  render: h => h(exam)
 })

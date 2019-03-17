@@ -4,15 +4,15 @@
 
 ### contextMenuData
 
-### contextMenuData.menuName
+#### contextMenuData.menuName
 
 >the menu name
 
-### contextMenuData.axis
+#### contextMenuData.axis
 
 >Positional coordinates displayed on menus,the x is clientX and y is clientY
 
-### contextMenuData.menulists
+#### contextMenuData.menulists
 
 >menu options. the "btnName" is the menu name and "icoName" is the icon name,can config or not.and "children" to  set its submenu."fnHandler" is the menu handler.
 

@@ -2,7 +2,7 @@
   <div style="position: fixed;left:0px;top:0;">
     <div
       @contextmenu="showMenu(index)"
-      style="width: 100px;height: 100px;background: red;margin-top: 20px;"
+      style="width: 100px;height: 100px;"
       v-for="(n, index) in 4"
       :key="n"
     >
@@ -36,34 +36,19 @@ export default {
             icoName: "fa fa-home fa-fw",
             children: [
               {
-                icoName: "fa fa-home fa-fw",
+                icoName: "fa fa-adn",
                 btnName: "选项1-1",
                 children: [
                   {
-                    icoName: "fa fa-home fa-fw",
-                    fnHandler: "Handler1",
+                    icoName: "fa fa-file",
+                    children: [
+                      {
+                        icoName: "fa fa-android",
+                        fnHandler: "Handler1",
+                        btnName: "选项1-1-1"
+                      }
+                    ],
                     btnName: "选项1-1-1"
-                  },
-                  {
-                    icoName: "fa fa-home fa-fw",
-                    fnHandler: "Handler2",
-                    btnName: "选项1-1-2"
-                  }
-                ]
-              },
-              {
-                icoName: "",
-                btnName: "选项1-2",
-                children: [
-                  {
-                    icoName: "",
-                    fnHandler: "Handler3",
-                    btnName: "选项1-2-1"
-                  },
-                  {
-                    icoName: "fa fa-home fa-fw",
-                    fnHandler: "Handler4",
-                    btnName: "选项1-2-2"
                   }
                 ]
               }
@@ -74,7 +59,6 @@ export default {
             children: [
               {
                 fnHandler: "Handler5",
-                icoName: "",
                 btnName: "选项2-1"
               }
             ]

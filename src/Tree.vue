@@ -52,6 +52,7 @@ export default {
 
   .child-ul-wrapper .has-child {
     padding: 5px 10px;
+    position: relative;
   }
   li {
     list-style: none;

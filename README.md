@@ -15,7 +15,7 @@ npm install vue-contextmenu --save
 ```
 <template>
 <div id="app" @contextmenu="showMenu"
-    style="width: 100px;height: 100px;background: red;">
+    style="width: 100px;height: 100px;margin-top: 20px;background: red;">
     <vue-context-menu :contextMenuData="contextMenuData"
         @savedata="savedata"
         @newdata="newdata"></vue-context-menu>
@@ -75,7 +75,7 @@ export default {
   <div style="position: fixed;left:0px;top:0;">
     <div
       @contextmenu="showMenu(index)"
-      style="width: 100px;height: 100px;"
+      style="width: 100px;height: 100px;margin-top: 20px;background: red;"
       v-for="(n, index) in 4"
       :key="n"
     >

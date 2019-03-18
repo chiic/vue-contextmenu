@@ -2,14 +2,14 @@
   <ul class="child-ul-wrapper" :class="float">
     <li v-for="i in itemchildren" :key="i.name" class="child-li-wrapper">
       <div v-if="i.children && i.children.length > 0" class="has-child">
-        <div class="parent-name">
+        <div class="parent-name btn-wrapper-simple">
           <i :class="i.icoName ? i.icoName : ''" class="nav-icon-fontawe"></i>
           <span class="nav-name-right">{{i.btnName}}</span>
           <i class="icon"></i></div>
           <tree-child-component :itemchildren="i.children" @childhandler="fnHandler" :float="float" />
       </div>
       <div v-else>
-        <div @click.stop="fnHandler(i)" class="no-child-btn">
+        <div @click.stop="fnHandler(i)" class="no-child-btn btn-wrapper-simple">
           <i :class="i.icoName ? i.icoName : ''" class="nav-icon-fontawe"></i>
           <span class="nav-name-right">{{i.btnName}}</span>
         </div>
@@ -57,16 +57,15 @@ export default {
   li {
     list-style: none;
   }
-  .parent-name {
-    display: flex;
-    justify-content: space-between;
-  }
   .parent-name .icon {
-    float: right;
+    position: absolute;
     display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url('./arrow.png')
+    top: 4px;
+    right: 0;
+    border-top: 4px solid transparent;
+    border-left: 8px solid #111111;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
   }
 
   .no-child-btn {
@@ -92,7 +91,13 @@ export default {
   }
   .nav-name-right {
     white-space: nowrap;
+    display: block;
     margin: auto 20px;
+  }
+  .btn-wrapper-simple {
+    position: relative;
+    height: 16px;
+    line-height: 16px;
   }
 </style>
 

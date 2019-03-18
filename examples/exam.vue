@@ -32,7 +32,7 @@ export default {
         },
         menulists: [
           {
-            btnName: "选项1",
+            btnName: "选项1111111",
             icoName: "fa fa-home fa-fw",
             children: [
               {

@@ -6,7 +6,7 @@
       class="context-menu-list"
       :key="item.btnName">
       <div v-if="item.children && item.children.length > 0" class="has-child">
-        <div class="parent-name" :class="{'no-allow': item.disabled ? item.disabled : false}">
+        <div class="parent-name btn-wrapper-simple" :class="{'no-allow': item.disabled ? item.disabled : false}">
           <i :class="item.icoName ? item.icoName : ''" class="nav-icon-fontawe"></i>
           <span class="nav-name-right">{{item.btnName}}</span>
           <i class="icon"></i>
@@ -15,7 +15,7 @@
       </div>
       <div v-else>
         <div @click.stop="item.disabled === true ? '' : fnHandler(item)"
-          class="no-child-btn"
+          class="no-child-btn btn-wrapper-simple"
           :class="{'no-allow': item.disabled ? item.disabled : false}">
           <i :class="item.icoName ? item.iconName : ''" class="nav-icon-fontawe"></i>
           <span class="nav-name-right">{{item.btnName}}</span>
@@ -119,7 +119,6 @@
   }
   .vue-contextmenu-listWrapper .context-menu-list {
     position: relative;
-    /* width: 150px; */
     background: #ffffff;
     text-decoration: none;
     list-style: none;
@@ -138,11 +137,14 @@
     display: block;
   }
   .parent-name .icon {
-    float: right;
+    position: absolute;
     display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url('./arrow.png')
+    top: 4px;
+    right: 0;
+    border-top: 4px solid transparent;
+    border-left: 8px solid #111111;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
   }
   .no-child-btn {
     padding: 5px 10px;
@@ -150,13 +152,23 @@
   }
   .nav-icon-fontawe {
     position: absolute;
+    left: 0;
   }
   .nav-name-right {
     margin: 0 20px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
   }
 
   .no-allow {
     color: #d3cfcf;
     cursor: not-allowed;
+  }
+
+  .btn-wrapper-simple {
+    position: relative;
+    height: 16px;
+    line-height: 16px;
   }
 </style>

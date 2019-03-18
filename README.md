@@ -2,6 +2,10 @@
 
 > Contextmenu component for vue2
 
+## overview
+![img](https://raw.githubusercontent.com/chiic/vue-contextmenu/master/test01.png)
+![img](https://raw.githubusercontent.com/chiic/vue-contextmenu/master/test02.png)
+
 ## Use Setup
 
 ### install vue-contextmenu
@@ -196,9 +200,6 @@ also if you use like elementUI, maybe you can use by
 ```
    import 'element-ui/lib/theme-chalk/index.css';
 ```
-### overview
-![img](https://raw.githubusercontent.com/chiic/vue-contextmenu/master/test01.png)
-![img](https://raw.githubusercontent.com/chiic/vue-contextmenu/master/test02.png)
 
 ### usage detail
 [usage detail](./USEDETAIL.md)

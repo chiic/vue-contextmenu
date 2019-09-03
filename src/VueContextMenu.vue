@@ -17,7 +17,7 @@
         <div @click.stop="item.disabled === true ? '' : fnHandler(item)"
           class="no-child-btn btn-wrapper-simple"
           :class="{'no-allow': item.disabled ? item.disabled : false}">
-          <i :class="item.icoName ? item.iconName : ''" class="nav-icon-fontawe"></i>
+          <i :class="item.icoName ? item.icoName : ''" class="nav-icon-fontawe"></i>
           <span class="nav-name-right">{{item.btnName}}</span>
         </div>
       </div>

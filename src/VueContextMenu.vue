@@ -39,7 +39,7 @@
     props: {
       contextMenuData: {
         type: Object,
-        requred: false,
+        required: false,
         default () {
           return {
             menuName: null,
